@@ -1,0 +1,169 @@
+:root{
+ 
+    --lightTan: #f3c7a9;
+    --mainTan: #ca936e;
+    --darkTan: #774f33;
+
+
+}
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.svg{
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.LinkWrapper svg path{
+
+  transition: all 0.2s;
+  
+}
+
+.LinkWrapper:hover svg path,
+.LinkWrapper:hover svg rect
+{
+
+  fill: #B73239;
+  transform: scale(1.1);
+  
+}
+
+
+
+.btn-hover{
+  transition: all 0.2s;
+}
+
+.btn-hover:hover{
+  transform: scale(1.06) translateY(-0.5rem);
+}
+
+.btn-hover:active{
+  transform: scale(1.02) translateY(0.1rem);
+}
+
+.active svg path,
+.active span{
+
+  fill: orange;
+  color: orange;
+
+}
+
+@keyframes fadeleft{
+  0%{
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(20rem);
+  }
+
+
+  80%{
+    opacity: .5;
+    transform: translateX(-3rem);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
+  }
+}
+
+@keyframes faderight{
+  0%{
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-20rem);
+  }
+
+
+  80%{
+    opacity: .5;
+    transform: translateX(3rem);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
+  }
+}
+
+.fade-left{
+
+  opacity: 0;
+  transform: translateX(20vw);
+  visibility: hidden;
+  transition: opacity 1200ms ease-out, transform 600ms ease-out,
+    visibility 1200ms ease-out;
+  will-change: opacity, transform, visibility;
+}
+
+.fade-right{
+
+  opacity: 0;
+  transform: translateX(-20vw);
+  visibility: hidden;
+  transition: opacity 1200ms ease-out, transform 600ms ease-out,
+    visibility 1200ms ease-out;
+  will-change: opacity, transform, visibility;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 1200ms ease-out, transform 600ms ease-out,
+    visibility 1200ms ease-out;
+  will-change: opacity, transform, visibility;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+.fade-left.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+.fade-right.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+.chef-img{
+  
+
+        transform: translateX(8rem);
+
+
+  @media only screen and (max-width: 760px) {
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,5 @@
+FONTS:
+
+- Archistico by Archistico: http://www.fontsquirrel.com/fonts/archistico
+
+- Rechtman by David Rakowski: http://www.fontsquirrel.com/fonts/Rechtman
